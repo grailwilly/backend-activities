@@ -37,6 +37,7 @@ class User
 end
 
 class Admin < User
+include AdminPermission
 end
 
 class Buyer < User
