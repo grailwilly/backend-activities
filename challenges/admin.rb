@@ -17,8 +17,17 @@ module BuyerPermission
   end
 end
 
-class User 
+class User
+  attr_accessor :username, :password, :ip_address
+
   def initialize(username, password, ip_address)
+    @username = username
+    @password = password
+    @ip_address = ip_address
+  end
+
+  def admin_login
+    login
   end
 
   protected
