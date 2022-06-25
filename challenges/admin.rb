@@ -30,17 +30,28 @@ class User
     login
   end
 
+  def buyer_login
+    login
+  end
+
+  def change_password=(password)
+    @password = password
+    puts "#{@password}"
+  end
+
   protected
   def login
     puts "User logged in. IP address: #{@ip_address}"
   end
+
 end
 
 class Admin < User
-include AdminPermission
+  include AdminPermission
 end
 
 class Buyer < User
+  include BuyerPermission
 end
 
 ## execute
