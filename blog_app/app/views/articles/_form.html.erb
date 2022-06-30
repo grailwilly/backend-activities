@@ -1,9 +1,9 @@
-<%= form_with(model: @article) do |f| %>
+<%= form_with(model: article) do |f| %>
  
   <% if @article.errors.any? %>
     <ul>
-      <% @article.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+      <% @article.errors.each do |error| %>
+        <li><%= error.full_message %></li>
       <% end %>
     </ul>
   <% end %>
