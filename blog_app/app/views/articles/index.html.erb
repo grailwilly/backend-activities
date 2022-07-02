@@ -1,3 +1,6 @@
 <% @articles.each do |article| %>
+  <%= link_to show_article_path(article.id) do %>
+    Got to Article
+  <% end %>
   <%= render "article", article: article %>
 <% end %>
