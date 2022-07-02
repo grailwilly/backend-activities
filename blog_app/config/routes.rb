@@ -10,5 +10,6 @@ Rails.application.routes.draw do
   get '/articles/new' => 'articles#new', as: 'new_article'
   post '/articles' => 'articles#create', as: 'create_article'
   get '/articles/:id' => 'articles#show', as: 'show_article'
+  get '/new_route' => 'application#new_route', as: 'new_route'
 
 end
