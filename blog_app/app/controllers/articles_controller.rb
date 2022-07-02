@@ -33,6 +33,12 @@ class ArticlesController < ApplicationController
 
   end
 
+  def add_like
+    @article = Article.find(params[:id])
+    @article.likes += 1
+    @article.save
+  end
+
   private
 
   def article_params

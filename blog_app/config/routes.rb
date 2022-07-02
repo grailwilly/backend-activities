@@ -11,5 +11,5 @@ Rails.application.routes.draw do
   post '/articles' => 'articles#create', as: 'create_article'
   get '/articles/:id' => 'articles#show', as: 'show_article'
   get '/new_route' => 'application#new_route', as: 'new_route'
-
+  post '/articles/add_like' => 'articles#add_like'
 end
