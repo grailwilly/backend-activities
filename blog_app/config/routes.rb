@@ -4,12 +4,14 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  # resources :articles
+  resources :articles do
+    resources :comments
+  end
 
-  get '/articles' => 'articles#index', as: 'articles'
-  get '/articles/new' => 'articles#new', as: 'new_article'
-  post '/articles' => 'articles#create', as: 'create_article'
-  get '/articles/:id' => 'articles#show', as: 'show_article'
-  get '/new_route' => 'application#new_route', as: 'new_route'
-  post '/articles/add_like' => 'articles#add_like'
+  # get '/articles' => 'articles#index', as: 'articles'
+  # get '/articles/new' => 'articles#new', as: 'new_article'
+  # post '/articles' => 'articles#create', as: 'create_article'
+  # get '/articles/:id' => 'articles#show', as: 'show_article'
+  # get '/new_route' => 'application#new_route', as: 'new_route'
+  # post '/articles/add_like' => 'articles#add_like'
 end
